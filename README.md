@@ -33,15 +33,15 @@ HyperApps are easy to clone, deploy, and test, thus they enhance application dev
 1. The browser passes URLs with ‘happ’ scheme/protocol to the plugin
 2. The plugin checks if a corresponding HyperApp is running
   1. If not, it checks if a corresponding HyperApp image exists
-If not, it downloads the bundle from a corresponding remote web server.
-The plugin creates the HyperApp image and a virtual machine.
-The plugin starts a virtual machine with the HyperApp image.
-The plugin channels HTTP requests to the HyperApp.
+    1. If not, it downloads the bundle from a corresponding remote web server
+    2. The plugin creates the HyperApp image and a virtual machine
+  2. The plugin starts a virtual machine with the HyperApp image
+1. The plugin channels HTTP requests to a corresponding HyperApp.
 
 Offline mode:
 
-A user enters happ://someserver/someapp.html in a browser.
-The browser passes URLs with ‘happ’ scheme/protocol to the plugin.
-The plugin checks if a corresponding HyperApp is running
-If not, it starts the HyperApp.
-The plugin channels HTTP requests to the HyperApp.
+1. A user enters happ://someserver/someapp.html in a browser
+2. The browser passes URLs with ‘happ’ scheme/protocol to the plugin
+3. The plugin checks if a corresponding HyperApp is running
+  * If not, it starts a corresponding HyperApp
+1. The plugin channels HTTP requests to a corresponding HyperApp.
