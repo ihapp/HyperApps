@@ -45,3 +45,12 @@ Offline mode:
 3. The plugin checks if a corresponding HyperApp is running
   * If not, it starts a corresponding HyperApp
 1. The plugin channels HTTP requests to a corresponding HyperApp.
+
+## Get Started on Linux
+
+This repository is a proof of concept example. The full implementation is ongoing and coming soon. Stay tuned.
+
+> Prerequisites: Firefox browser
+
+1. [Install Docker](http://docs.docker.com/linux/step_one/)
+
