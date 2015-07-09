@@ -53,4 +53,8 @@ This repository is a proof of concept example. The full implementation is ongoin
 > Prerequisites: Firefox browser
 
 1. [Install Docker](http://docs.docker.com/linux/step_one/)
+2. Test it with [Node.js Docker image](https://registry.hub.docker.com/_/node/)
 
+```
+docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp node:0.10 node your-daemon-or-script.js
+```
