@@ -52,7 +52,14 @@ This repository is a proof of concept example. The full implementation is ongoin
 
 > Prerequisites: Firefox browser
 
+1. Install the Firefox addon
 1. [Install Docker](http://docs.docker.com/linux/step_one/)
+2. Add yourself to the Docker group
+
+```
+$ sudo usermod -aG docker <YourLoginName>
+```
+
 2. Test it with [Node.js Docker image](https://registry.hub.docker.com/_/node/)
 
 ```
