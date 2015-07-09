@@ -56,5 +56,5 @@ This repository is a proof of concept example. The full implementation is ongoin
 2. Test it with [Node.js Docker image](https://registry.hub.docker.com/_/node/)
 
 ```
-docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp node:0.10 node your-daemon-or-script.js
+docker run -v /home/parallels/addon-sdk-1.17/my-addon/data:/usr/src/myapp -w /usr/src/myapp -d -p 80:1337 node:0.12 node node.js
 ```
