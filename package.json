@@ -1,0 +1,11 @@
+{
+  "name": "happ",
+  "title": "Internet Hyper Application",
+  "id": "{3D4F08B3-FA9A-44D1-BE2A-A5EFF83FC0B4}",
+  "description": "HyperApp Protocol Handler",
+  "author": "Andrew Step",
+	"homepage": "https://github.com/ihapp/intro",
+  "license": "MPL 2.0",
+  "version": "0.1",
+	"unpack": true
+}
