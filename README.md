@@ -67,4 +67,14 @@ This repository is a proof of concept example. The full implementation is ongoin
 
 4. Download and install the *happ.xpi* Firefox addon
 
-> Selecting the "Open" item from Firefox's "File" menu. This will bring up a file selection dialog; navigate to the "happ.xpi" file, open it and follow the prompts to install the add-on. 
+ > Select the "Open" item from Firefox's "File" menu, it will bring up a file selection dialog. Navigate to the "happ.xpi" file, open it and follow the prompts to install the add-on. 
+
+5. Try the following in Firefox
+
+ ```
+ happ://myapp1:8081/index.html
+ ```
+ 
+ Here is the output:
+ > Hello HyperApp 
+
