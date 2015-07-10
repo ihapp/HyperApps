@@ -24,13 +24,13 @@ HyperApps are easy to clone, deploy, and test, thus they enhance application dev
 
 ![](http://www.tentity.com/BaseFlow.png)
 
-1. A user enters a URL in a browser, example: https://someserver/someapp.html
+1. A user enters a URL in a browser, example: `https://someserver/someapp.html`
 1. The browser loads the page and its script checks if its HyperApp exists on user’s machine
-  * If so, it redirects to happ://someserver/someapp.html
+  * If so, it redirects to `happ://someserver/someapp.html`
   * Otherwise it checks if the HyperApp plugin is installed
-    * If so, it redirects to happ://someserver/someap.html
+    * If so, it redirects to `happ://someserver/someap.html`
     * Otherwise it asks the user to install the plugin
-1. The browser passes URLs with ‘happ’ scheme/protocol to the plugin
+1. The browser passes URLs with `happ` scheme/protocol to the plugin
 2. The plugin checks if a corresponding HyperApp is running
   1. If not, it checks if a corresponding HyperApp image exists
     1. If not, it downloads the bundle from a corresponding remote web server
@@ -40,8 +40,8 @@ HyperApps are easy to clone, deploy, and test, thus they enhance application dev
 
 Offline mode:
 
-1. A user enters happ://someserver/someapp.html in a browser
-2. The browser passes URLs with ‘happ’ scheme/protocol to the plugin
+1. A user enters `happ://someserver/someapp.html` in a browser
+2. The browser passes URLs with `happ` scheme/protocol to the plugin
 3. The plugin checks if a corresponding HyperApp is running
   * If not, it starts a corresponding HyperApp
 1. The plugin channels HTTP requests to a corresponding HyperApp.
@@ -80,7 +80,7 @@ This repository is a proof of concept example. The full implementation is ongoin
 
 ##### What just happened?
 
-In this prototype, we access the HyperApp directly by using the **happ** scheme. So, the Firefox addon have intercepted the entered url, started a container for **myapp1** with mapped port 8081, and channeled **myapp1** trafic to the container **myapp1**. The web application is located at ~/.mozilla/firefox/<???>.default/extensions/{3D4F08B3-FA9A-44D1-BE2A-A5EFF83FC0B4}/resources/happ/data
+In this prototype, we access the HyperApp directly by using the `happ` scheme. So, the Firefox addon have intercepted the entered url, started a container for **myapp1** with mapped port 8081, and channeled **myapp1** trafic to the container **myapp1**. The web application is located at `~/.mozilla/firefox/<???>.default/extensions/{3D4F08B3-FA9A-44D1-BE2A-A5EFF83FC0B4}/resources/happ/data`
 
 Try also the following:
 
@@ -91,4 +91,4 @@ Try also the following:
  Here is the output:
  > Hello from HyperApp 
  
-**Note:** the ending letter x indicates a server-side javascript, so the app.js was executed by node.js.
+**Note:** the ending letter `x` indicates a server-side javascript, so the `app.js` was executed by the node.js.
