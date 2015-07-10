@@ -55,16 +55,16 @@ This repository is a proof of concept example. The full implementation is ongoin
 1. [Install Docker](http://docs.docker.com/linux/step_one/)
 2. Add yourself to the Docker group
 
-```
-$ sudo usermod -aG docker <YourLoginName>
-```
+ ```
+ $ sudo usermod -aG docker <YourLoginName>
+ ```
 
 3. In this prototype, we use the official [Node.js Docker image](https://registry.hub.docker.com/_/node/). It is quite big, so we need to pre-load it.
 
-```
-docker pull node:0.12
-```
+ ```
+ docker pull node:0.12
+ ```
 
-4. Download and install the happ.xpi Firefox addon
+4. Download and install the *happ.xpi* Firefox addon
 
-> Selecting the "Open" item from Firefox's "File" menu. This will bring up a file selection dialog; navigate to the > "happ.xpi" file, open it and follow the prompts to install the add-on. 
+> Selecting the "Open" item from Firefox's "File" menu. This will bring up a file selection dialog; navigate to the "happ.xpi" file, open it and follow the prompts to install the add-on. 
