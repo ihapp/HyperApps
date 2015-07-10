@@ -78,3 +78,6 @@ This repository is a proof of concept example. The full implementation is ongoin
  Here is the output:
  > Hello HyperApp 
 
+##### What just happened?
+
+In this prototype, we access the HyperApp directly by using **happ** scheme. So, the Firefox addon have intercepted the entered url, started a container for **myapp1** with mapped port 8081, and channeled **myapp1** trafic to the container **myapp1**. The web application is located at ~/.mozilla/firefox/???.default/extensions/{3D4F08B3-FA9A-44D1-BE2A-A5EFF83FC0B4}/resources/happ/data
