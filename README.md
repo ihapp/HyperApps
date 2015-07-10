@@ -65,7 +65,7 @@ This repository is a proof of concept example. The full implementation is ongoin
  docker pull node:0.12
  ```
 
-4. Download and install the *happ.xpi* Firefox addon
+4. Download and install the [happ.xpi](happ.xpi) Firefox addon
 
  > Select the "Open" item from Firefox's "File" menu, it will bring up a file selection dialog. Navigate to the "happ.xpi" file, open it and follow the prompts to install the add-on. 
 
