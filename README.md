@@ -52,7 +52,6 @@ This repository is a proof of concept example. The full implementation is ongoin
 
 > Prerequisites: Firefox browser
 
-1. Install the Firefox addon
 1. [Install Docker](http://docs.docker.com/linux/step_one/)
 2. Add yourself to the Docker group
 
@@ -60,8 +59,12 @@ This repository is a proof of concept example. The full implementation is ongoin
 $ sudo usermod -aG docker <YourLoginName>
 ```
 
-2. Test it with [Node.js Docker image](https://registry.hub.docker.com/_/node/)
+3. In this prototype, we use the official [Node.js Docker image](https://registry.hub.docker.com/_/node/). It is quite big, so we need to pre-load it.
 
 ```
-docker run -v /home/parallels/addon-sdk-1.17/my-addon/data:/usr/src/myapp -w /usr/src/myapp -d -p 80:1337 node:0.12 node node.js
+docker pull node:0.12
 ```
+
+4. Download and install the happ.xpi Firefox addon
+
+> Selecting the "Open" item from Firefox's "File" menu. This will bring up a file selection dialog; navigate to the > "happ.xpi" file, open it and follow the prompts to install the add-on. 
