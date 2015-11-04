@@ -48,13 +48,24 @@ Offline mode:
 
 ## Get Started on Mac
 
-The current implementation depends on Docker Machine, VirtualBox, and Firefox.
+The current implementation depends on Docker Machine, VirtualBox, and Firefox. In this demo, our web app is the popular 2048 game on Docker Hub https://hub.docker.com/r/ihapp/demo2048/.
 
 > Prerequisites: Firefox browser
 
-1. If you have [Kitematic](http://docs.docker.com/kitematic/) installed, skip this step. Otherwise, download and install `HyperApp-0.1.0-Mac-beta.pkg` (from releases). It installs `VirtualBox` and `Docker Machine`. Or, if you are a developer and plan to work with docker containers, you can install `Kitematic` instead. 
-2. Add yourself to the Docker group
+1. If you have [Kitematic](http://docs.docker.com/kitematic/) installed, skip this step. Otherwise, download and install the `HyperApp-0.1.0-Mac-beta.pkg` (from releases). It installs `VirtualBox` and `Docker Machine`. Or, if you are a developer and plan to work with docker containers, you can install `Kitematic` instead. 
+2. Download and install the `HyperApp-0.2.0-Firefox.xpi` Firefox addon (from releases)
 
+ > Select the "Open" item from Firefox's "File" menu, it will bring up a file selection dialog. Navigate to the "HyperApp-0.2.0-Firefox.xpi" file, open it and follow the prompts to install the add-on. 
+
+3. Try the following in Firefox
+
+ ```
+ happ://ihapp.demo2048/
+ ```
+
+> The result is the popular 2048 game as seen at http://docs.docker.com/kitematic/nginx-web-server/.
+
+**Note:** Docker Machine starts slow, but it can be fixed in the future.  
 
 ## Get Started on Linux
 
