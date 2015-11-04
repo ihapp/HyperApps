@@ -52,8 +52,8 @@ The current implementation depends on Docker Machine, VirtualBox, and Firefox. I
 
 > Prerequisites: Firefox browser
 
-1. If you have [Kitematic](http://docs.docker.com/kitematic/) installed, skip this step. Otherwise, download and install the `HyperApp-0.1.0-Mac-beta.pkg` (from releases). It installs `VirtualBox` and `Docker Machine`. Or, if you are a developer and plan to work with docker containers, you can install `Kitematic` instead. 
-2. Download and install the `HyperApp-0.2.0-Firefox.xpi` Firefox addon (from releases)
+1. If you have [Kitematic](http://docs.docker.com/kitematic/) installed, skip this step. Otherwise, download and install the **HyperApp-0.1.0-Mac-beta.pkg** (from releases). It installs `VirtualBox` and `Docker Machine`. Or, if you are a developer and plan to work with docker containers, you can install `Kitematic` instead. 
+2. Download and install the **HyperApp-0.2.0-Firefox.xpi** Firefox addon (from releases)
 
  > Select the "Open" item from Firefox's "File" menu, it will bring up a file selection dialog. Navigate to the "HyperApp-0.2.0-Firefox.xpi" file, open it and follow the prompts to install the add-on. 
 
@@ -63,13 +63,13 @@ The current implementation depends on Docker Machine, VirtualBox, and Firefox. I
  happ://ihapp.demo2048/
  ```
 
-> The result is the popular 2048 game as seen at http://docs.docker.com/kitematic/nginx-web-server/.
+ > The result is the popular 2048 game as seen at http://docs.docker.com/kitematic/nginx-web-server/. Behind the scene, Firefox passes the `happ` scheme to the addon. The addon created a VM **ihapp.demo2048**, started a container for **ihapp/demo2048**, and channeled **happ://ihapp.demo2048/** trafic to the container. 
 
 **Note:** Docker Machine starts slow, but it can be fixed in the future.  
 
 ## Get Started on Linux
 
-This repository is a proof of concept example. The full implementation is ongoing and coming soon. Stay tuned.
+The current implementation depends on Docker and Firefox. In this demo, our web app is the popular 2048 game on Docker Hub https://hub.docker.com/r/ihapp/demo2048/.
 
 > Prerequisites: Firefox browser
 
@@ -80,36 +80,15 @@ This repository is a proof of concept example. The full implementation is ongoin
  $ sudo usermod -aG docker <YourLoginName>
  ```
 
-3. In this prototype, we use the official [Node.js Docker image](https://registry.hub.docker.com/_/node/). It is quite big, so we need to pre-load it.
+3. Download and install the **HyperApp-0.2.0-Firefox.xpi** Firefox addon (from releases)
+
+ > Select the "Open" item from Firefox's "File" menu, it will bring up a file selection dialog. Navigate to the "HyperApp-0.2.0-Firefox.xpi" file, open it and follow the prompts to install the add-on. 
+
+4. Try the following in Firefox
 
  ```
- docker pull node:0.12
- ```
-
-4. Download and install the [happ.xpi](happ.xpi) Firefox addon
-
- > Select the "Open" item from Firefox's "File" menu, it will bring up a file selection dialog. Navigate to the "happ.xpi" file, open it and follow the prompts to install the add-on. 
-
-5. Try the following in Firefox
-
- ```
- happ://myapp1:8081/index.html
+ happ://ihapp.demo2048/
  ```
  
- Here is the output:
- > Hello HyperApp 
+ > The result is the popular 2048 game as seen at http://docs.docker.com/kitematic/nginx-web-server/. Behind the scene, Firefox passes the `happ` scheme to the addon. The addon started a container for **ihapp/demo2048**, and channeled **happ://ihapp.demo2048/** trafic to the container. 
 
-##### What just happened?
-
-In this prototype, we access the HyperApp directly by using the `happ` scheme. So, the Firefox addon have intercepted the entered url, started a container for **myapp1** with mapped port 8081, and channeled **myapp1** trafic to the container **myapp1**. The web application is located at `~/.mozilla/firefox/<???>.default/extensions/{3D4F08B3-FA9A-44D1-BE2A-A5EFF83FC0B4}/resources/happ/data`
-
-Try also the following:
-
- ```
- happ://myapp1:8081/app.jsx
- ```
- 
- Here is the output:
- > Hello from HyperApp 
- 
-**Note:** the ending letter `x` indicates a server-side javascript, so the `app.js` was executed by the node.js.
