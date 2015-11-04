@@ -46,6 +46,16 @@ Offline mode:
   * If not, it starts a corresponding HyperApp
 1. The plugin channels HTTP requests to a corresponding HyperApp.
 
+## Get Started on Mac
+
+The current implementation depends on Docker Machine, VirtualBox, and Firefox.
+
+> Prerequisites: Firefox browser
+
+1. If you have [Kitematic](http://docs.docker.com/kitematic/) installed, skip this step. Otherwise, download and install `HyperApp-0.1.0-Mac-beta.pkg` (from releases). It installs `VirtualBox` and `Docker Machine`. Or, if you are a developer and plan to work with docker containers, you can install `Kitematic` instead. 
+2. Add yourself to the Docker group
+
+
 ## Get Started on Linux
 
 This repository is a proof of concept example. The full implementation is ongoing and coming soon. Stay tuned.
